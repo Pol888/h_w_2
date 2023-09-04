@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+       <title>Фрукты</title>
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+    {{super()}}
+    {% endblock %}
+    {% block main %}
+        <ul class="border" style="position: absolute; top: 250px">
+       {% for i in fr %}
+            <li style="color: #666666; font-size: 33px">{{i}}</li>
+       {% endfor %}
+        </ul>
+            {% endblock %}
+    {% block footer %}
+    {{super()}}
+    {% endblock %}
+</body>
+</html>

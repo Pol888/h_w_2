@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Главная</title>
+    {% endblock %}
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #86989B;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #86989B;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+    </style>
+</head>
+<body>
+     {% block header %}
+    <header style="height: 85px; background: lavender">
+        <p style=";color: #ff0309; font-size: 44px">Лучший интернет магазин в галактике</p>
+        {% block head %}
+        <ul id="navbar">
+            <li><a href="http://127.0.0.1:5000/main/">Главная</a></li>
+
+            <li><a href="#">Основные</a>
+             <ul>
+               <li><a href="http://127.0.0.1:5000/fruits/">Фрукты</a></li>
+               <li><a href="http://127.0.0.1:5000/vegetable/">Овощи</a></li>
+             </ul>
+
+            </li>
+  <li><a href="http://127.0.0.1:5000/about_us/">О нас</a></li>
+  <li><a href="http://127.0.0.1:5000/exit/">Выйти</a></li>
+
+        </ul>
+{% endblock %}
+    </header>
+    {% endblock %}
+    {% block main %}
+     <main style=";height: 500px; position: absolute;
+                top: 200px;width: 1500px">
+        <p style="position:absolute; left: 700px; color:mediumorchid;; font-size: 100px" >Здравствуй, <br>{{name}}!</p>
+
+
+    </main>
+    {% endblock %}
+     {% block footer %}
+    <footer style="height: 200px; position: absolute;background: #b7ffc6;
+                top: 700px;width: 1500px">
+        <p style="color: rosybrown; font-size: 55px; position: absolute; left: 750px">Все хорошо!</p>
+    </footer>
+    {% endblock %}
+ </body>
+</html>

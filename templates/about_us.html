@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+       <title>О нас</title>
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+    {{super()}}
+    {% endblock %}
+    {% block main %}
+    <p style="position: absolute; top: 200px; color: #ff9900;font-size: 44px; left: 400px;">Мы это сила!</p>
+    {% endblock %}
+    {% block footer %}
+    {{super()}}
+    {% endblock %}
+
+</body>
+</html>

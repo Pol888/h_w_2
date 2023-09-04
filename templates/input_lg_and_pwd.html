@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        {{super()}}
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+        {{super()}}
+        {% block head %}
+
+        {% endblock %}
+    {% endblock %}
+    {% block main %}
+     <main style=";height: 500px; position: absolute;
+                top: 200px;width: 1500px">
+        <p style="position:absolute; left: 400px; color:mediumorchid;; font-size: 100px" >Пройдите авторизацию!</p>
+    </main>
+
+    <form style="position:absolute;right:100px;top:70px;" action="/" method="post">
+        <label>
+            <input type="text" name="username" placeholder="Имя">
+            <input type="text" name="email" placeholder="Почта">
+            <input type="submit" value="Войти">
+        </label>
+
+    </form>
+
+
+
+    {% endblock %}
+     {% block footer %}
+        {{super()}}
+    {% endblock %}
+</body>
+</html>
